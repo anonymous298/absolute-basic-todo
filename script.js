@@ -25,35 +25,32 @@ if (localStorage.length > 1) {
 }
 
 todoInputBox.addEventListener('change', () => { 
-    if (todoInputBox.value === '') {
-        alert('Please Enter some To Do before adding');
-    }
+    // if (todoInputBox.value === '') {
+    //     alert('Please Enter some To Do before adding');
+    // }
     
-    else {
-        let div = document.createElement('div');
-        div.className = 'todos';
-        div.innerHTML = `<div class="todos">
-        <input type="checkbox" id="checked">
-        <p>${todoInputBox.value}</p>
-        <button id="removeToDo">Remove</button>
-        </div>`
+    let div = document.createElement('div');
+    div.className = 'todos';
+    div.innerHTML = `<div class="todos">
+    <input type="checkbox" id="checked">
+    <p>${todoInputBox.value}</p>
+    <button id="removeToDo">Remove</button>
+    </div>`
 
-        localStorage.setItem(todoInputBox.value, todoInputBox.value);
+    localStorage.setItem(todoInputBox.value, todoInputBox.value);
 
-        div.querySelector('#checked').addEventListener('click', () => {
-             div.querySelector('p').classList.toggle('checked')
-        }) 
-        
-        div.querySelector('#removeToDo').addEventListener('click', () => {
-            div.remove();
-            localStorage.removeItem(div.querySelector('p').innerHTML, div.querySelector('p').innerHTML);
-            // console.log(div.querySelector('p').innerHTML)
-        });
-        
-        todoContainer.append(div);
-        todoInputBox.value = '';
-
-    } 
+    div.querySelector('#checked').addEventListener('click', () => {
+            div.querySelector('p').classList.toggle('checked')
+    }) 
+    
+    div.querySelector('#removeToDo').addEventListener('click', () => {
+        div.remove();
+        localStorage.removeItem(div.querySelector('p').innerHTML, div.querySelector('p').innerHTML);
+        // console.log(div.querySelector('p').innerHTML)
+    });
+    
+    todoContainer.append(div);
+    todoInputBox.value = '';
 })
 
 addButton.addEventListener('click', () => {
