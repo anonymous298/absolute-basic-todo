@@ -1,0 +1,176 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(to right, orange, rgb(255, 0, 43));
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    /* min-height: 100dvh; */
+}
+
+.main-container {
+    margin: 100px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 55%;
+    background: rgba(255, 255, 255, 0.2); 
+    backdrop-filter: blur(10px);  
+     -webkit-backdrop-filter: blur(10px);
+    
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+
+.main-container h1 {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 40px;
+    
+}
+
+.main-container .todo-input {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.2); 
+    backdrop-filter: blur(10px);  
+     -webkit-backdrop-filter: blur(10px);
+    
+    /* padding: 5px; */
+    border-radius: 25px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    border: none;
+}
+
+.main-container .todo-input input {
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    padding: 15px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 20px;
+}
+
+.main-container .todo-input input:focus {
+    outline: none;
+    border: none;
+    box-shadow: none;
+}
+
+.main-container .todo-input input::placeholder {
+    color: grey;
+}
+
+.main-container .todo-input button {
+    /* height: 100%; */
+    padding: 15px 30px;
+    border-radius: 25px;
+    border: none;
+    background-color: greenyellow;
+    transition: 0.2s ease-in-out;
+    cursor: pointer;
+    color: black;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.main-container .todo-input button:hover {
+    background-color: white;
+    transform: scale(1.02);
+}
+
+.main-container .todo-container {
+    /* background-color: darkblue; */
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    /* background: rgba(255, 255, 255, 0.2); 
+    backdrop-filter: blur(10px);  
+     -webkit-backdrop-filter: blur(10px);
+     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); */
+}
+
+.main-container .todo-container .todos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.2); 
+    backdrop-filter: blur(10px);  
+     -webkit-backdrop-filter: blur(10px);
+     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    
+    /* padding: 0px 10px; */
+    border-radius: 25px;
+    border: none;
+}
+
+.main-container .todo-container .todos p {
+    width: 100%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 20px;
+    padding: 15px;
+    font-weight: 600;
+    color: rgb(50, 50, 50);
+}
+
+.main-container .todo-container .todos button {
+    height: 100%;
+    padding: 15px 10px;
+    border-radius: 25px;
+    border: none;
+    background-color: red;
+    transition: 0.2s ease-in-out;
+    cursor: pointer;
+    color: black;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    margin: 4px 6px;
+}
+
+.main-container .todo-container .todos button:hover {
+    background-color: orange;
+    transform: scale(1.02);
+}
+
+@media only screen and (max-width: 920px) {
+    .main-container {
+        width: 70%;
+    }
+    .main-container h1 {
+        font-size: 30px;
+    }
+}
+
+@media only screen and (max-width: 490px) {
+    .main-container {
+        width: 90%;
+    }
+    .main-container .todo-input input {
+        font-size: 17px;
+    }
+    .main-container .todo-container .todos p {
+        font-size: 17px;
+    }
+
+    .main-container .todo-container .todos button {
+        padding: 12px 10px;
+        font-size: 17px;
+    }
+
+    .main-container h1 {
+        font-size: 25px;
+    }
+
+    .main-container .todo-input button {
+        font-size: 17px;
+    }
+}
