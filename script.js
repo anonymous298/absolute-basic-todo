@@ -33,11 +33,16 @@ todoInputBox.addEventListener('change', () => {
         let div = document.createElement('div');
         div.className = 'todos';
         div.innerHTML = `<div class="todos">
+        <input type="checkbox" id="checked">
         <p>${todoInputBox.value}</p>
         <button id="removeToDo">Remove</button>
         </div>`
 
         localStorage.setItem(todoInputBox.value, todoInputBox.value);
+
+        div.querySelector('#checked').addEventListener('click', () => {
+             div.querySelector('p').classList.toggle('checked')
+        }) 
         
         div.querySelector('#removeToDo').addEventListener('click', () => {
             div.remove();
@@ -60,9 +65,14 @@ addButton.addEventListener('click', () => {
         let div = document.createElement('div');
         div.className = 'todos';
         div.innerHTML = `<div class="todos">
+        <input type="checkbox" id="checked">
         <p>${todoInputBox.value}</p>
         <button id="removeToDo">Remove</button>
         </div>`
+
+        div.querySelector('#checked').addEventListener('click', () => {
+             div.querySelector('p').classList.toggle('checked')
+        }) 
         
         div.querySelector('#removeToDo').addEventListener('click', () => {
             div.remove();
