@@ -141,6 +141,15 @@ body {
     transform: scale(1.02);
 }
 
+.checked {
+    text-decoration: line-through;
+    color: gray !important;
+}
+
+#checked {
+    margin: 10px;
+}
+
 @media only screen and (max-width: 920px) {
     .main-container {
         width: 70%;
